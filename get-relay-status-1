@@ -1,0 +1,15 @@
+#! /usr/pkg/bin/expect --
+set timeout 8
+spawn cu -l /dev/ttyU0 -s 115200
+sleep .5
+send "GV\n"
+expect -re \"."
+sleep .5
+send "G1\n"
+expect "\[0-1]"
+sleep .5
+send "~.\n"
+exit
+
+
+
