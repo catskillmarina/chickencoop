@@ -1,6 +1,13 @@
-OBJ = controls.o
+controls.o:	controls.c control.h
 CC = cc
 
-switches:	$(OBJ)
-	$(CC) -o switches switches.c $(OBJ)
+all:		controls.o switches
+
+switches:	
+	$(CC) -o switches switches.c controls.o
 	
+clean:
+	rm controls.o
+
+distclean:
+	rm controls.o switches
