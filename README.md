@@ -10,3 +10,8 @@ the USB relays. The next switch - switch #2 will be controlling the
 current to an old car power window motor to open and close the door.
 
 The CODE that is mine is BSD licensed
+
+C code is working faster and more nicely than expect but is still
+terribly kludgy. Opening and closing filehandle if device is not
+working is not an ideal solution but it works. In expect it simply
+times out.
